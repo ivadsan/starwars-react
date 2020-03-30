@@ -30,12 +30,13 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.css$/,
+        test: /\.(sa|sc|c)ss$/,
         use: [
           {
             loader: MiniCssExtractPlugin.loader
           },
-          'css-loader'
+          'css-loader',
+          'sass-loader'
         ]
       },
       {
@@ -45,7 +46,7 @@ module.exports = {
           options: {
             limit: 10000,
             name: '[hash].[ext]',
-            outputPath: 'assets'
+            outputPath: 'assets/'
           }
         }
       }

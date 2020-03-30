@@ -1,0 +1,46 @@
+@import './Vars.scss';
+body {
+  margin: 0;
+  background-color: #000;
+  font-family: $theme-font;
+}
+
+h1 {
+  color: white;
+  ;
+  font-size: 42px;
+  text-align: center;
+}
+
+.container {
+  width: 780px;
+  margin: auto;
+  
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn {
+  margin: 15px;
+  background-color: black;
+  font-size: 1.7rem;
+  color: yellow;
+  border: 1px solid yellow;
+  padding: 10px;
+  width: 170px;
+  transition: 300ms;
+  font-family: inherit;
+}
+.btn:active {
+  transform: scale(0.9);
+}
+
+
+
+.loading{
+  display: flex;
+  justify-content: center;
+}

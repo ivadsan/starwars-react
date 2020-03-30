@@ -1,0 +1,36 @@
+.report {
+  width: 100%;
+  padding: 15px 0;
+}
+
+.title td {
+  text-align: center;
+  color: black;
+  background: orange;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 10px 0;
+  letter-spacing: 1.2px;
+}
+.col1 {
+  width: 30%;
+  text-align: center;
+}
+.col2 {
+  width: 70%;
+}
+
+.report .row td {
+  padding: 10px 0;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+}
+
+.report .row:nth-child(odd) {
+  font-weight: bold;
+  color: #facc2e;
+}
+.report .row:nth-child(even) {
+  border: thin solid #facc2e;
+  background-color: #facc2e;
+}
