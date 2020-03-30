@@ -55,7 +55,7 @@ export class App extends Component {
         if (resource === 'people') {
           return {
             name: item.name,
-            films: item.films
+            films: item.films.sort()
           };
         } else if (resource === 'films') {
           return {
