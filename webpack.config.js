@@ -14,7 +14,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'js/[name].[hash].js',
-    publicPath: 'http://localhost:3001/',
+    publicPath: 'https://cosmosoftroot.github.io/starwars-react/',
     chunkFilename: 'js/[id].[chunkhash].js'
   },
   optimization: {
