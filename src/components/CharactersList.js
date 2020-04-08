@@ -16,8 +16,8 @@ function CharactersList(props) {
             <td className='col1'>{item.name}</td>
             <td>
               <ul>
-                {item.films.map((film) => (
-                  <li key={Math.random()}>{props.films[film]}</li>
+                {item.films.map((film,key) => (
+                  <li key={key}>{props.films[film]}</li>
                 ))}
               </ul>
             </td>
