@@ -4,7 +4,7 @@ import Nav from './Nav';
 import CharactersList from './CharactersList';
 import MiniLoader from './MiniLoader';
 
-const URL_BASE = 'https://swapi.co/api/';
+const URL_BASE = 'http://swapi.dev/api/';
 
 export class App extends Component {
   constructor(props) {
@@ -42,7 +42,9 @@ export class App extends Component {
 
     try {
       const res = await axios.get(url);
+      console.log(url)
       const resource = url.split(URL_BASE)[1].split('/')[0];
+      console.log('resource',resource)
 
       if (resource === 'people') {
         this.setState({
@@ -91,19 +93,22 @@ export class App extends Component {
   render() {
     return (
       <div className='container'>
+        <div className='header'>
+
         <h1>Starwars</h1>
         <Nav
           previous={this.state.previous}
           next={this.state.next}
           onPrevious={this.handlePreviousPage}
           onNext={this.handleNextPage}
-        />
+          />
+      </div>
 
         {this.state.loading ? (
           <MiniLoader />
-        ) : (
-          <CharactersList {...this.state}/>
-        )}
+          ) : (
+            <CharactersList {...this.state}/>
+            )}
       </div>
     );
   }

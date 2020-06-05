@@ -3,28 +3,24 @@ import '../assets/styles/components/CharactersList.scss';
 
 function CharactersList(props) {
   return (
-    <table className='report'>
-      <thead>
-        <tr className='title'>
-          <td className='col1'>Character</td>
-          <td className='col2'>Films</td>
-        </tr>
-      </thead>
-      <tbody>
+    <section className='report'>
+        <div className='report__row'>
+          <div className='report__title'>Character</div>
+          <div className='report__title'>Films</div>
+        </div>
         {props.people.map((item) => (
-          <tr className='row' key={item.name}>
-            <td className='col1'>{item.name}</td>
-            <td>
-              <ul>
-                {item.films.map((film,key) => (
-                  <li key={key}>{props.films[film]}</li>
+        <div className='report__row'>
+          <div>{item.name}</div>          
+          <div>
+            <ul>
+              {item.films.map((film,key) => (
+                <li key={key}>{props.films[film]}</li>
                 ))}
-              </ul>
-            </td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+            </ul>
+          </div>
+        </div>
+          ))}
+    </section>
   );
 }
 
