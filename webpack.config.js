@@ -14,7 +14,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'js/[name].[hash].js',
-    publicPath: '/',
+    publicPath: 'https://cosmosoftroot.github.io/starwars-react/',
     chunkFilename: 'js/[id].[chunkhash].js'
   },
   optimization: {
@@ -67,8 +67,8 @@ module.exports = {
     new AddAssetHtmlPlugin({
       filepath: path.resolve(__dirname, 'dist/js/*.dll.js'),
       outputPath: 'js',
-      // publicPath: 'https://cosmosoftroot.github.io/starwars-react/js'
-      publicPath: 'js'
+      publicPath: 'https://cosmosoftroot.github.io/starwars-react/js'
+     
     }),
     new CleanWebpackPlugin({
       cleanOnceBeforeBuildPatterns: ['**/app.*']
