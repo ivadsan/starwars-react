@@ -4,7 +4,7 @@ import Nav from './Nav';
 import CharactersList from './CharactersList';
 import MiniLoader from './MiniLoader';
 
-const URL_BASE = 'http://swapi.dev/api/';
+const URL_BASE = 'https://swapi.dev/api/';
 
 export class App extends Component {
   constructor(props) {
